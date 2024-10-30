@@ -1,0 +1,113 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>BisaDesign</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="body" [fullscreen]="true" scroll-y="false">
+  <div class="center-content">
+    <!-- Logo -->
+    <img src="assets/gambar/logo KWU.png" alt="Logo" class="logo" />
+    <h2 class="title">MASUK</h2>
+
+    <!-- Username Input -->
+    <div class="name">
+      <ion-label class="labelname" position="floating">Masukkan Nama</ion-label>
+      <ion-item class="input1" lines="full">
+        <ion-input
+          type="text"
+          [(ngModel)]="username"
+          required="required"
+        ></ion-input>
+      </ion-item>
+    </div>
+
+    <!-- Password Input -->
+    <div class="password">
+      <ion-label class="labelpassword" position="floating"
+        >Masukkan Password</ion-label
+      >
+      <ion-item class="input2" lines="full">
+        <ion-input
+          type="password"
+          [(ngModel)]="password"
+          required="required"
+        ></ion-input>
+      </ion-item>
+    </div>
+
+    <!-- Login Button -->
+    <ion-button
+      class="login-button"
+      type="submit"
+      expand="block"
+      (click)="login()"
+    >
+      Masuk
+    </ion-button>
+  </div>
+</ion-content>
+
+<style>
+  .body {
+    --background: #1f1f1f;
+    --ion-font-family: "Poppins";
+  }
+
+  .center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .logo {
+    width: 220px;
+    height: auto;
+    margin-bottom: 3px;
+  }
+
+  .title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #22c47e;
+    margin-bottom: 10px;
+  }
+
+  .labelname {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+  }
+  .labelpassword {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+  }
+
+  .input1,
+  .input2 {
+    width: 300px;
+    height: 45px;
+    --background: translucent;
+    color: #22c47e;
+    border-radius: 8px;
+    border: 1px solid #22c47e;
+    margin: 2px 0 1px 0;
+  }
+
+  .login-button {
+    width: 180px;
+    height: 45px;
+    font-size: 16px;
+    font-weight: bold;
+    --background: #22c47e;
+    --border-radius: 8px;
+    --box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    color: white;
+    margin: 30px 0 0 0;
+  }
+</style>

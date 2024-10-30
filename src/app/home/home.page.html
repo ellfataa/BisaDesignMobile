@@ -1,77 +1,37 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      <div
-        class="navbar"
-        style="
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-        "
-      >
-        <div class="logo" style="display: flex; align-items: center">
-          <img
-            src="assets/gambar/uzumaki.png"
-            alt="Uzumaki"
-            style="height: 40px; width: 40px"
-          />
-          <b style="margin-left: 10px"
-            >El<span style="color: red">fata.</span></b
-          >
-        </div>
-
-        <ion-button fill="clear" slot="end">
-          <ion-icon name="menu" style="color: black"></ion-icon>
-        </ion-button>
-      </div>
-    </ion-title>
+    <ion-title>BisaDesign</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <div id="hero" style="align-items: start; margin: 5px 20px">
-    <h2 style="font-weight: 900; margin: 0; margin-top: 40px">Halo,</h2>
-    <p style="font-size: 30px; font-weight: 900; margin: 0">
-      Saya
-      <span style="color: red">Luthfi Emillulfata</span>
-    </p>
-    <u
-      ><i><h3 style="margin: 0; margin-top: 5px">NIM H1D022017</h3></i></u
-    >
+<ion-content [fullscreen]="true" style="--background: #1f1f1f">
+  <ion-fab
+    vertical="top"
+    horizontal="end"
+    slot="fixed"
+    style="margin-top: 3px; margin-right: 4px"
+  >
+    <ion-fab-button size="small" color="light" (click)="logout()">
+      <ion-icon
+        ios="exit-outline"
+        md="exit-sharp"
+        style="color: #22c47e"
+      ></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 
-    <p style="text-align: center">
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus
-      aspernatur, esse quod ullam saepe natus ipsam, nisi provident, quae
-      voluptatibus cupiditate quas quia culpa error tempore nesciunt. Eveniet,
-      nulla porro.
-    </p>
-
-    <ion-button
-      shape="round"
-      style="
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-        color: white;
-      "
-    >
-      Unduh CV
-    </ion-button>
-  </div>
-  <br />
-
-  <div class="about-me">
-    <ion-card>
-      <img alt="Silhouette of mountains" src="assets/gambar/luthfi.jpg" />
-      <ion-card-header>
-        <ion-card-title>About Me</ion-card-title>
-        <ion-card-subtitle>Luthfi Emillulfata</ion-card-subtitle>
-      </ion-card-header>
-
-      <ion-card-content>
-        Here's a small text description for the card content. Nothing more,
-        nothing less.
-      </ion-card-content>
-    </ion-card>
+  <!-- Konten Utama -->
+  <div
+    style="
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      color: white;
+      text-align: center;
+    "
+  >
+    <p style="font-size: 24px">Selamat datang, {{ nama }}</p>
   </div>
 </ion-content>
